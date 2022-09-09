@@ -3,13 +3,14 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable, of } from 'rxjs';
 import { user } from './models/user';
 import { catchError, map, tap } from 'rxjs';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class UserService {
 
-  private REST_API_URL = 'http://localhost:4000/user';
+  private REST_API_URL = environment.API_URL+'/user';
 
   private HTTP_HEADER = {
     header: new HttpHeaders({ 'content-type': 'application/json' }),

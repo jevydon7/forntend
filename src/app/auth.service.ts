@@ -3,12 +3,13 @@ import { Injectable } from '@angular/core';
 import { Observable, of, pipe } from 'rxjs';
 import {  user } from './models/user';
 import { catchError,map, tap } from 'rxjs';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
-  REST_API_URL = 'http://localhost:4000/auth'
+  REST_API_URL = environment.API_URL+'/auth'
 
   constructor(private auth:HttpClient) { }
   islogged(){

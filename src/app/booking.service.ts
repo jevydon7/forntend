@@ -3,12 +3,13 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable, of } from 'rxjs';
 import { booking} from './models/booking';
 import { catchError, map, tap } from 'rxjs';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class BookingService {
-  private REST_API_URL = 'http://localhost:4000/bookService';
+  private REST_API_URL = environment.API_URL+'/bookService';
 
   private HTTP_HEADER = {
     header: new HttpHeaders({ 'content-type': 'application/json' }),
