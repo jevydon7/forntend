@@ -1,5 +1,5 @@
 export const environment = {
   production: true,
-  API_URL:'https://paragliding-resort7.herokuapp.com/'
+  API_URL:'https://paragliding-resort7.herokuapp.com'
 
 };
