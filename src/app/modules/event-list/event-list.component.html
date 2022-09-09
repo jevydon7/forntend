@@ -1,0 +1,61 @@
+<h1> EVENTS INFORMATION</h1>
+<div *ngFor="let reservation of events">
+    <!-- <p>{{reservation.firstName}}</p>
+    <p>{{reservation.lastName}}</p>
+    <p>{{reservation.phoneNumber}}</p> -->
+    <!-- <p>{{reservation.eventSelected}}</p> -->
+</div>
+
+
+
+  <div class="container">
+  <div class="mat-elevation-z8">
+    <table mat-table [dataSource]="adminDataSource" matSort>
+
+      <!-- ID Column -->
+      <!-- <ng-container matColumnDef="firstName">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>Firstname</th>
+        <td mat-cell *matCellDef="let row"> {{row.firstName}} </td>
+      </ng-container>
+
+      Progress Column
+      <ng-container matColumnDef="lastName">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>Lastname</th>
+        <td mat-cell *matCellDef="let row"> {{row.lastName}}</td>
+      </ng-container>
+
+      Name Column
+      <ng-container matColumnDef="email">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>Email</th>
+        <td mat-cell *matCellDef="let row">{{row.email}}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="telephone">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>PhoneNumber</th>
+        <td mat-cell *matCellDef="let row">{{row.phoneNumber}}</td>
+      </ng-container> -->
+
+      <ng-container matColumnDef="eventsName">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>Event Name</th>
+        <td mat-cell *matCellDef="let row"> {{row.eventsName}} </td>
+      </ng-container>
+
+
+      <ng-container matColumnDef="action">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>Action</th>
+        <td mat-cell *matCellDef="let row">
+          <button (click)="updateevent(row._id)">Edit</button>
+          <button (click)="deletebutn(row._id)">Delete</button>
+        </td>
+      </ng-container>
+
+      <!-- Fruit Column -->
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+
+
+    </table>
+
+  </div>
+  </div>

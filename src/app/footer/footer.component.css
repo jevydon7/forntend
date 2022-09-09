@@ -1,0 +1,15 @@
+footer{
+    padding: 3rem;
+    background-color: rgb(9, 9, 76);
+    color: white;
+    display: flex;
+    flex-direction: row;
+    /* column-gap: 8em; */
+    justify-content: space-around;
+    flex-wrap: wrap;
+ }
+
+ li{
+    padding: 10px;
+ }
+ 

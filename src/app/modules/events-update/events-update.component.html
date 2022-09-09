@@ -1,0 +1,29 @@
+<div class="thebox">
+<div>
+    <form [formGroup]="updateform" *ngIf="updateform">
+        <div class="container">
+           <h2 style="color: black; text-align: center; margin-bottom: 20px">
+                        Update Events
+           </h2>
+           </div>
+           <div class="event">
+              <span></span>
+              <label for="event selected">event selected</label><br />
+              <input
+                 type="text"
+                 name="event selected"
+                 formControlName="eventselected"
+                 #event
+              >
+              <br /><br />
+           </div>
+            
+           <button><input type="submit" value="confirm" id="submit" (click)="confirmbutton({
+            eventsName: event.value
+    
+    
+           })"></button>
+        
+    </form>
+    </div>
+    </div>

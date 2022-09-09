@@ -1,0 +1,32 @@
+
+nav{
+    position: relative;
+    /* margin-top: 2rem; */
+    display: flex;
+    justify-content: center;
+    background-color: rgb(9, 9, 76);
+    color: white;
+    padding: 20px;
+ 
+}
+
+span{
+   margin-left: 2rem;
+}
+
+span a{
+    text-decoration: none;
+    color: white;
+}
+
+span a:hover{
+   color: aqua;
+   cursor: pointer;
+}
+
+.heading{
+   display: flex;
+   justify-content: center;
+   margin-top: 26px;
+  
+}

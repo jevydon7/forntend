@@ -1,0 +1,85 @@
+<app-header></app-header>
+<div class="box">
+<form [formGroup]="bookingForm">
+    <div class="container">
+       <h2 style="color: black; text-align: center; margin-bottom: 20px">
+                    Shopping Room
+       </h2>
+       <div class="names">
+          <div class="firstName">
+             <span></span>
+             <label for="firstName">First Name: </label> <br />
+             <input
+                type="text"
+                name="firstName"
+                formControlName="firstname"
+                #fname
+                
+             />
+          </div>
+          <div class="lastName">
+             <span></span>
+             <label for="lastName">Last Name</label><br />
+             <input
+                type="text"
+                name="lastName"
+                formControlName="lastname"
+                #lname
+    
+             >
+             <br /><br />
+          </div>
+       </div>
+       <div class="telNo">
+                  <span></span>
+                  <label for="telNo">Telephone Number</label><br />
+                  <input
+                     type="tel"
+                     name="telNo"
+                     formControlName="phonenumber"
+                     #telenumb
+                     
+                  />
+          <div class="email">
+             <span></span>
+             <label for="dob">Email</label><br />
+             <input
+                type="email"
+                id="email"
+                formControlName="email"
+                #mail
+             />
+             <br /><br />
+          </div>
+       </div>
+       <div class="event">
+          <span></span>
+          <label for="select Event">select Event</label><br />
+          <!-- <input
+             type="text"
+             name="event selected"
+             formControlName="eventselected"
+          > -->
+       </div>
+        
+       <select formControlName="eventselected" #evnt>
+         <option *ngFor="let events of event">{{events.eventsName}}</option>
+       </select>
+       <br>
+       <br>
+       <button (click)="submit({
+         firstName: fname.value,
+         lastName: lname.value,
+         email: mail.value,
+         phoneNumber: telenumb.value,
+         eventSelected: evnt.value});
+         fname.value= '';
+         lname.value= '';
+         mail.value= '';
+         telenumb.value='';
+         evnt.value='';
+          " type="submit">Submit</button>
+    </div>
+ </form>
+</div>
+<app-footer></app-footer>

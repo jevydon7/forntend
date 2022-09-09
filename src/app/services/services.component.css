@@ -1,0 +1,34 @@
+.box{
+    width: 100vw;
+    height:100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    background-image:url('/assets/imgpara.jpg');
+    background-position: center;
+    background-size: cover;
+}
+
+/* form {
+    border: 3px solid black;
+    border-radius: 30px;
+    width: 300px;
+    background-color: aquamarine;
+    opacity: 70%;
+    
+  } */
+
+  form{
+    border: 1px solid rgb(5, 0, 0); 
+    border-radius: 6px;
+    background-color: rgb(255, 162, 40);
+  opacity: 65%;
+  width:300px;
+  text-align: center;
+  }
+
+  option{
+    text-align: center;
+  }

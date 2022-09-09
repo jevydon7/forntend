@@ -1,0 +1,83 @@
+<!-- <nav>
+  <span>Home</span>
+  <span>About us</span>
+  <span>Services</span>
+  <span>Contact us</span>
+</nav>-->
+<app-header></app-header>
+
+<div class="heading">
+  <h1>Paragliding Resort</h1>
+</div>
+<img src="assets/paraw.jpg" alt="para" width="100%" height="700" />
+
+<div class="section">
+  <h1>Services</h1>
+  <p>
+    Paragliding Resort provides three fun actives to boost your adrenaline. events such include :paragliding,hang gliding,tandem fun flight.<br>book your event
+  </p>
+</div>
+<div class="eventContainer"  class="img-ctn" >
+  <div *ngFor="let image of images; let i = index"  id="eventCard">
+    <p>{{eventsDetails[i]?.eventsName}}</p>
+    <img src="{{ image }}" alt="para" width="300" height="300" /><br>
+  </div>
+</div>
+<div class="btn">
+  <button routerLink="/services">BOOK A SERVICE</button>
+</div>
+
+<div class="picone">
+  <div class="pcontent">
+    <h1>About us</h1>
+    <p>
+      Paragliding Resort is fulfilling an old dream of flying. We want to make paragliding popular as an adventure activity and sport as well as a tourist attraction in Jamaica. It is the simplest and most affordable way of flying and we believe that this sport is safer than its reputation makes us believe.
+    </p>
+  </div>
+  <div class="pimage">
+    <img src="assets/parao.jpg" alt="para" width="400" height="200" />
+  </div>
+</div>
+<!-- <footer>
+  <div>
+    <ul>
+      <h2>Explore</h2>
+      <li>Home</li>
+      <li>Service</li>
+      <li>About us</li>
+      <li>Flyingsites</li>
+    </ul>
+  </div>
+  <div>
+    <ul>
+      <h2>Service</h2>
+
+      <li>Fun Flight</li>
+      <li>Learn to fly</li>
+      <li>Event</li>
+      <li>Equipment</li>
+    </ul>
+  </div>
+  <div>
+    <ul>
+      <h2>Follow</h2>
+
+      <li>Instgram</li>
+      <li>Twitter</li>
+      <li>Linkedin</li>
+    </ul>
+  </div>
+  <div>
+    <ul>
+      <h2>Legal</h2>
+
+      <li>Terms</li>
+      <li>Privacy</li>
+    </ul>
+  </div>
+  Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto sunt quae,
+  blanditiis excepturi accusantium, illum enim itaque labore tempora odit quos
+  at. Modi eos iste tenetur nostrum dolores harum adipisci!
+</footer> -->
+
+<app-footer></app-footer>

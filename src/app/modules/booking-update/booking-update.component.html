@@ -1,0 +1,76 @@
+<div class="thebox">
+<form [formGroup]="updateform" *ngIf="updateform">
+    <div class="container">
+       <h2 style="color: black; text-align: center; margin-bottom: 20px">
+                    Update Area
+       </h2>
+       <div class="names">
+          <div class="firstName">
+             <span></span>
+             <label for="firstName">First Name: </label> <br />
+             <input
+                type="text"
+                name="firstName"
+                formControlName="firstname"
+                #fname
+             />
+          </div>
+          <div class="lastName">
+             <span></span>
+             <label for="lastName">Last Name</label><br />
+             <input
+                type="text"
+                name="lastName"
+                formControlName="lastname"
+                #lname
+    
+             >
+             <br /><br />
+          </div>
+       </div>
+       <div class="telNo">
+                  <span></span>
+                  <label for="telNo">Telephone Number</label><br />
+                  <input
+                     type="tel"
+                     name="telNo"
+                     formControlName="telephonenumb"
+                     #telenumb
+                     
+                  />
+          <div class="email">
+             <span></span>
+             <label for="dob">Email</label><br />
+             <input
+                type="email"
+                id="email"
+                formControlName="email"
+                #mail
+             />
+             <br /><br />
+          </div>
+       </div>
+       <div class="event">
+          <span></span>
+          <label for="event selected">event selected</label><br />
+          <input
+             type="text"
+             name="event selected"
+             formControlName="eventselected"
+             #event
+          >
+          <br /><br />
+       </div>
+        
+       <button><input type="submit" value="confirm" id="submit" (click)="confirmbutton({
+        firstName: fname.value, 
+        lastName: lname.value,
+        phoneNumber: telenumb.value,
+        email: mail.value,
+        eventSecleted: event.value
+
+
+       })"></button>
+    </div>
+ </form>
+</div>

@@ -1,0 +1,14 @@
+<div class="wrapper">
+  <div class="sidebar">
+    <h2>Sidebar</h2>
+    <ul>
+        <li><a routerLink="./home">home</a></li>
+        <li><a routerLink="/admin/events"> events</a></li>
+        <li><a (click)="logoutbutn()" class="mouse"> logout</a></li>
+        
+    </ul>
+  </div>
+  <div class="content">
+    <router-outlet></router-outlet>
+  </div>
+</div>
