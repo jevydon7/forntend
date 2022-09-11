@@ -41,8 +41,8 @@ export class BookingService {
     );
   }
 
-  updateBooking(id: String, data: object): Observable<booking[]> {
-    return this.http.put<booking[]>(`${this.REST_API_URL}/update/${id}`,data).pipe(
+  updateBooking(id: String, data: object): Observable<booking> {
+    return this.http.put<booking>(`${this.REST_API_URL}/update/${id}`,data).pipe(
       tap((updateBooking) => {
         console.log(`this booked = ${updateBooking}`);
       }),
